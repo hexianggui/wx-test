@@ -1,0 +1,22 @@
+<t-tab-bar defaultValue="{{value}}" bindchange="onChange" split="{{false}}" color="{{[theme.custom.colorPrimary, '#bbb' ]}}">
+  <!-- <t-tab-bar-item
+	 wx:for="{{list}}"
+   value="{{item.value}}"
+	 wx:key="value"
+	>
+		<view class="custom-tab-bar-wrapper" data="{{index}}">
+			<t-icon  name="{{item.icon}}" size="48rpx" />
+			<view class="text">{{ item.text }}</view>
+		</view>
+	</t-tab-bar-item> -->
+  <t-tab-bar-item
+        wx:for="{{list}}"
+        wx:for-item="item"
+        wx:for-index="index"
+        wx:key="index"
+        icon="{{item.icon}}"
+        value="{{item.value}}"
+      >
+        {{item.text}}
+      </t-tab-bar-item>
+</t-tab-bar>
